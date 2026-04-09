@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-headline: 'Manrope', sans-serif;
+  --font-body: 'Public Sans', sans-serif;
+}
+
+:root {
+  color: #1b1c15;
+  background: #fbfaee;
+  font-family: 'Public Sans', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply m-0 bg-[#fbfaee] text-[#1b1c15] font-body;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .atelier-page {
+    @apply min-h-screen bg-[#fbfaee] text-[#1b1c15];
+  }
+
+  .atelier-shell {
+    @apply min-h-screen bg-[#fbfaee];
+  }
+
+  .atelier-sidebar {
+    @apply fixed left-0 top-0 hidden h-screen w-[17rem] flex-col justify-between bg-[#f5f4e8] px-4 py-6 xl:flex;
+  }
+
+  .atelier-main {
+    @apply min-h-screen xl:ml-[17rem];
+  }
+
+  .atelier-topbar {
+    @apply sticky top-0 z-40 flex items-center justify-between gap-4 border-b border-[#e4e3d7] bg-[rgba(251,250,238,0.88)] px-6 py-4 backdrop-blur-md lg:px-10;
+  }
+
+  .atelier-panel {
+    @apply rounded-[28px] bg-white p-6 shadow-[0_20px_40px_rgba(27,28,21,0.06)];
+  }
+
+  .atelier-panel-soft {
+    @apply rounded-[28px] bg-[#f5f4e8] p-6;
+  }
+
+  .atelier-card {
+    @apply rounded-[24px] bg-white p-5 shadow-[0_14px_30px_rgba(27,28,21,0.05)];
+  }
+
+  .atelier-stat {
+    @apply rounded-[26px] bg-white p-6 shadow-[0_14px_30px_rgba(27,28,21,0.05)];
+  }
+
+  .atelier-input {
+    @apply w-full rounded-2xl border-0 bg-[#efeee3] px-4 py-3 text-[#1b1c15] outline-none ring-0 transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,44,152,0.18)];
+  }
+
+  .atelier-primary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#002c98] to-[#1a43bf] px-6 py-3 font-headline text-sm font-bold text-white transition hover:scale-[0.99];
+  }
+
+  .atelier-secondary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#a0f399] px-5 py-3 font-headline text-sm font-bold text-[#005312] transition hover:brightness-[0.98];
+  }
+
+  .atelier-outline-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[#c4c5d6] bg-transparent px-5 py-3 font-headline text-sm font-semibold text-[#1b1c15] transition hover:bg-white;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 rounded-r-full px-4 py-3 font-headline text-sm font-semibold uppercase tracking-[0.18em] text-[#6c6d78] transition;
+  }
+
+  .sidebar-link-active {
+    @apply bg-[#e9e9dd] text-[#002c98];
+  }
+
+  .page-title {
+    @apply font-headline text-4xl font-extrabold tracking-[-0.04em] text-[#1b1c15] lg:text-5xl;
+  }
+
+  .section-title {
+    @apply font-headline text-2xl font-bold tracking-[-0.03em] text-[#1b1c15];
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.24em] text-[#1b6d24];
+  }
+
+  .status-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em];
+  }
+
+  .table-wrap {
+    @apply overflow-x-auto rounded-[24px] bg-white shadow-[0_14px_30px_rgba(27,28,21,0.05)];
+  }
+
+  .table-base {
+    @apply min-w-full border-collapse text-left text-sm;
+  }
+
+  .table-base thead tr {
+    @apply bg-[#efeee3];
+  }
+
+  .table-base th {
+    @apply px-4 py-3 font-headline text-xs font-bold uppercase tracking-[0.16em] text-[#6c6d78];
+  }
+
+  .table-base td {
+    @apply border-t border-[#efeee3] px-4 py-3 text-[#444654];
+  }
+}
+
+a.atelier-primary-button,
+a.atelier-primary-button:visited,
+a.atelier-primary-button:hover,
+a.atelier-primary-button:active {
+  color: #ffffff;
+}
+
+a.atelier-outline-button,
+a.atelier-outline-button:visited,
+a.atelier-outline-button:hover,
+a.atelier-outline-button:active {
+  color: #1b1c15;
+}

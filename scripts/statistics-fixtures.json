@@ -1,0 +1,42 @@
+{
+  "anova": [
+    {
+      "id": "anova_reference_3x3",
+      "description": "Matriz 3x3 usada en la vista inicial de ANOVA",
+      "matrix": [
+        [7.56, 9.68, 11.65],
+        [9.98, 9.69, 10.69],
+        [7.23, 10.49, 11.77]
+      ]
+    },
+    {
+      "id": "anova_reference_4x2",
+      "description": "Caso adicional rectangular para validar bloques y tratamientos",
+      "matrix": [
+        [12, 15],
+        [14, 18],
+        [13, 17],
+        [11, 16]
+      ]
+    }
+  ],
+  "chiSquare": [
+    {
+      "id": "chi_square_reference_3x2",
+      "description": "Matriz 3x2 usada en la vista inicial de Chi-cuadrado",
+      "matrix": [
+        [45, 55],
+        [62, 38],
+        [51, 49]
+      ]
+    },
+    {
+      "id": "chi_square_reference_2x3",
+      "description": "Caso adicional 2x3 para validar grados de libertad y esperadas",
+      "matrix": [
+        [10, 20, 30],
+        [6, 9, 17]
+      ]
+    }
+  ]
+}
